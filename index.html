@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.css">
+    
+</head>
+<body>
+<style>
+/* Apply background image to the entire body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://plus.unsplash.com/premium_photo-1678283974882-a00a67c542a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uYWwlMjBleHBlbnNlJTIwdHJha2VyfGVufDB8fDB8fHww') no-repeat center center fixed;
+    background-size: cover;
+}
+</style>
+    <div class="container">
+        <header class="header">
+            <h1>Personal Expense Tracker</h1>
+            <p class="subtitle">Track your spending, achieve your goals</p>
+        </header>
+
+        <main>
+            <section class="budget-section">
+                <h2>Set Monthly Budget</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="monthly-budget">Enter Your Budget (₹)</label>
+                        <input type="number" id="monthly-budget" name="budget" placeholder="₹0.00" step="0.01" required>
+                    </div>
+                    <button type="submit" class="btn-save">Save Budget</button>
+                </form>
+            </section>
+            <section class="summary-section">
+                <div class="summary-card">
+                    <h3>Monthly Overview</h3>
+                    <div class="summary-amount">₹2,450.00</div>
+                    <p class="summary-label">Total Expenses</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Categories</h3>
+                    <div class="summary-amount">6</div>
+                    <p class="summary-label">Active Categories</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Budget Status</h3>
+                    <div class="summary-amount warning">85%</div>
+                    <p class="summary-label">of monthly budget used</p>
+                </div>
+            </section>
+
+            <section class="expense-form-section">
+                <h2>Add New Expense</h2>
+                <form class="expense-form">
+                    <div class="form-group">
+                        <label for="expense-amount">Amount</label>
+                        <input type="number" id="expense-amount" name="amount" placeholder="₹0.00" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-category">Category</label>
+                        <select id="expense-category" name="category" required>
+                            <option value="">Select a category</option>
+                            <option value="groceries">Groceries</option>
+                            <option value="transport">Transport</option>
+                            <option value="utilities">Utilities</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="health">Health</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-date">Date</label>
+                        <input type="date" id="expense-date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expense-description">Description</label>
+                        <input type="text" id="expense-description" name="description" placeholder="Enter expense description">
+                    </div>
+                    <button type="submit" class="btn-primary">Add Expense</button>
+                </form>
+            </section>
+
+            <section class="expense-list-section">
+                <h2>Recent Expenses</h2>
+                <div class="table-container">
+                    <table class="expense-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-01-15</td>
+                                <td>Grocery Shopping</td>
+                                <td><span class="category-tag groceries">Groceries</span></td>
+                                <td class="amount">₹156.50</td>
+                                <td><button class="delete-btn">❌</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-01-14</td>
+                                <td>Electric Bill</td>
+                                <td><span class="category-tag utilities">Utilities</span></td>
+                                <td class="amount">₹85.20</td>
+                                <td><button class="delete-btn">❌</button></td>
+                            </tr>
+                            <tr>
+                                <td>2024-01-13</td>
+                                <td>Movie Tickets</td>
+                                <td><span class="category-tag entertainment">Entertainment</span></td>
+                                <td class="amount">₹32.00</td>
+                                <td><button class="delete-btn">❌</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

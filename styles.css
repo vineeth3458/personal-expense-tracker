@@ -1,0 +1,187 @@
+:root {
+    /* Colors */
+    --primary-color: #0c0c0c;
+    --primary-hover: #070707;
+    --background-color: #f8fafc;
+    --surface-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #0a0a0a;
+    --border-color: #e2e8f0;
+    
+    /* Categories */
+    --category-groceries: #22c55e;
+    --category-transport: #6366f1;
+    --category-utilities: #f59e0b;
+    --category-entertainment: #ec4899;
+    --category-health: #14b8a6;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+}
+
+.header h1 {
+    background: linear-gradient(90deg, #0a0a0a, #0c0c0c); /* Gradient effect */
+    color: white; /* White text for contrast */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.summary-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.summary-card {
+    background: var(--surface-color);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summary-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+}
+
+.summary-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.warning {
+    color: #ef4444;
+}
+
+section {
+    background: var(--surface-color);
+    border-radius: 12px;
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.category-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+}
+
+.category-tag.groceries { background-color: var(--category-groceries); }
+.category-tag.transport { background-color: var(--category-transport); }
+.category-tag.utilities { background-color: var(--category-utilities); }
+.category-tag.entertainment { background-color: var(--category-entertainment); }
+.category-tag.health { background-color: var(--category-health); }
+
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-sm);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: var(--spacing-md);
+    }
+
+    .summary-section {
+        grid-template-columns: 1fr;
+    }
+}
+.budget-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.budget-section h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.budget-section .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.budget-section label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.budget-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.budget-section .btn-save {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.budget-section .btn-save:hover {
+    background: #45a049;
+}
